@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta name="monetag" content="cf8a8a1fa7a2614ca4edd4b62faadb1d">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BADAL ADS EARNING</title>
+
 <style>
 body{
   margin:0;
@@ -21,61 +23,48 @@ body{
   padding:20px;
   box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
-h2{
-  text-align:center;
-  margin-bottom:15px;
-}
+h2{text-align:center;margin-bottom:15px;}
 input{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
+  width:100%;padding:10px;margin:8px 0;
+  border-radius:8px;border:1px solid #ccc;
 }
 button{
-  width:100%;
-  padding:10px;
-  border:none;
-  border-radius:8px;
-  background:#c33764;
-  color:#fff;
-  font-size:16px;
-  cursor:pointer;
+  width:100%;padding:10px;border:none;
+  border-radius:8px;background:#c33764;
+  color:#fff;font-size:16px;cursor:pointer;
 }
-button:hover{
-  background:#1d2671;
-}
-.switch{
-  text-align:center;
-  margin-top:10px;
-  cursor:pointer;
-  color:#1d2671;
-}
+button:hover{background:#1d2671;}
+.switch{text-align:center;margin-top:10px;cursor:pointer;color:#1d2671;}
 .hidden{display:none;}
-.dashboard{
-  text-align:center;
-}
+.dashboard{text-align:center;}
 .card{
   background:#f1f1f1;
-  padding:15px;
-  margin:10px 0;
-  border-radius:10px;
+  padding:15px;margin:10px 0;border-radius:10px;
 }
 </style>
 </head>
-<body><div class="container" id="authBox">
-  <h2>BADAL ADS EARNING</h2>  <div id="loginForm">
+
+<body>
+
+<div class="container" id="authBox">
+  <h2>BADAL ADS EARNING</h2>
+
+  <div id="loginForm">
     <input type="text" id="loginUser" placeholder="Username">
     <input type="password" id="loginPass" placeholder="Password">
     <button onclick="login()">Login</button>
     <div class="switch" onclick="showRegister()">Create Account</div>
-  </div>  <div id="registerForm" class="hidden">
+  </div>
+
+  <div id="registerForm" class="hidden">
     <input type="text" id="regUser" placeholder="Username">
     <input type="password" id="regPass" placeholder="Password">
     <button onclick="register()">Register</button>
     <div class="switch" onclick="showLogin()">Already have account?</div>
   </div>
-</div><div class="container hidden" id="dashboard">
+</div>
+
+<div class="container hidden" id="dashboard">
   <h2>Welcome to BADAL ADS</h2>
   <div class="dashboard">
     <div class="card">💰 Balance: ₹0.00</div>
@@ -83,58 +72,94 @@ button:hover{
     <button onclick="watchAd()">Watch Ad & Earn</button>
     <button onclick="logout()" style="margin-top:10px;background:red;">Logout</button>
   </div>
-</div><script>
+</div>
+
+<script>
 let userData = {};
 
 function showRegister(){
   document.getElementById('loginForm').classList.add('hidden');
   document.getElementById('registerForm').classList.remove('hidden');
 }
-
 function showLogin(){
   document.getElementById('registerForm').classList.add('hidden');
   document.getElementById('loginForm').classList.remove('hidden');
 }
-
 function register(){
-  let u = document.getElementById('regUser').value;
-  let p = document.getElementById('regPass').value;
-  if(u && p){
-    userData[u] = p;
-    alert('Account Created!');
-    showLogin();
-  }else{
-    alert('Fill all fields');
-  }
+  let u = regUser.value, p = regPass.value;
+  if(u && p){ userData[u]=p; alert('Account Created!'); showLogin(); }
+  else alert('Fill all fields');
 }
-
 function login(){
-  let u = document.getElementById('loginUser').value;
-  let p = document.getElementById('loginPass').value;
-  if(userData[u] === p){
-    document.getElementById('authBox').classList.add('hidden');
-    document.getElementById('dashboard').classList.remove('hidden');
-  }else{
-    alert('Invalid Login');
-  }
+  let u = loginUser.value, p = loginPass.value;
+  if(userData[u]===p){
+    authBox.classList.add('hidden');
+    dashboard.classList.remove('hidden');
+  } else alert('Invalid Login');
 }
-
 function logout(){
-  document.getElementById('dashboard').classList.add('hidden');
-  document.getElementById('authBox').classList.remove('hidden');
+  dashboard.classList.add('hidden');
+  authBox.classList.remove('hidden');
 }
 
-let balance = 0;
-let ads = 0;
-
+let balance=0, ads=0;
 function watchAd(){
   ads++;
-  balance += 0.5;
-  document.querySelector('.card').innerHTML = '💰 Balance: ₹'+balance.toFixed(2);
-  document.querySelectorAll('.card')[1].innerHTML = '📊 Ads Viewed: '+ads;
+  balance+=0.5;
+  document.querySelector('.card').innerHTML='💰 Balance: ₹'+balance.toFixed(2);
+  document.querySelectorAll('.card')[1].innerHTML='📊 Ads Viewed: '+ads;
 }
-</script><!-- Ads Scripts --><script src="https://quge5.com/88/tag.min.js" data-zone="228663" async data-cfasync="false"></script><script>(function(s){s.dataset.zone='10862293',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script><a href="https://omg10.com/4/10862295" target="_blank">Open Ad</a>
+</script>
 
-<script src="https://5gvci.com/act/files/tag.min.js?z=10862296" data-cfasync="false" async></script><script>(function(s){s.dataset.zone='10862298',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script><script>(function(s){s.dataset.zone='10862300',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script></body>
-</html></body>
+<!-- OLD ADS -->
+<script src="https://quge5.com/88/tag.min.js" data-zone="228663" async></script>
+
+<script>
+(function(s){
+s.dataset.zone='10862293',
+s.src='https://al5sm.com/tag.min.js'
+})(document.body.appendChild(document.createElement('script')))
+</script>
+
+<a href="https://omg10.com/4/10862295" target="_blank">Open Ad</a>
+
+<script src="https://5gvci.com/act/files/tag.min.js?z=10862296" async></script>
+
+<script>
+(function(s){
+s.dataset.zone='10862298',
+s.src='https://nap5k.com/tag.min.js'
+})(document.body.appendChild(document.createElement('script')))
+</script>
+
+<script>
+(function(s){
+s.dataset.zone='10862300',
+s.src='https://n6wxm.com/vignette.min.js'
+})(document.body.appendChild(document.createElement('script')))
+</script>
+
+<!-- NEW ADS (3 ta) -->
+<script>
+(function(s){
+s.dataset.zone='10862707',
+s.src='https://al5sm.com/tag.min.js'
+})(document.body.appendChild(document.createElement('script')))
+</script>
+
+<script>
+(function(s){
+s.dataset.zone='10862716',
+s.src='https://al5sm.com/tag.min.js'
+})(document.body.appendChild(document.createElement('script')))
+</script>
+
+<script>
+(function(s){
+s.dataset.zone='10862718',
+s.src='https://al5sm.com/tag.min.js'
+})(document.body.appendChild(document.createElement('script')))
+</script>
+
+</body>
 </html>
