@@ -1,71 +1,137 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-  <title>My Pro Website</title>
+<meta name="monetag" content="059aa14bfc1baab7a058dd942b3e3177">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BADAL ADS EARNING</title>
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#1d2671,#c33764);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.container{
+  width:350px;
+  background:#fff;
+  border-radius:15px;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+h2{
+  text-align:center;
+  margin-bottom:15px;
+}
+input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#c33764;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{
+  background:#1d2671;
+}
+.switch{
+  text-align:center;
+  margin-top:10px;
+  cursor:pointer;
+  color:#1d2671;
+}
+.hidden{display:none;}
+.dashboard{
+  text-align:center;
+}
+.card{
+  background:#f1f1f1;
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
+}
+</style>
 </head>
+<body><div class="container" id="authBox">
+  <h2>BADAL ADS EARNING</h2>  <div id="loginForm">
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="switch" onclick="showRegister()">Create Account</div>
+  </div>  <div id="registerForm" class="hidden">
+    <input type="text" id="regUser" placeholder="Username">
+    <input type="password" id="regPass" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <div class="switch" onclick="showLogin()">Already have account?</div>
+  </div>
+</div><div class="container hidden" id="dashboard">
+  <h2>Welcome to BADAL ADS</h2>
+  <div class="dashboard">
+    <div class="card">💰 Balance: ₹0.00</div>
+    <div class="card">📊 Ads Viewed: 0</div>
+    <button onclick="watchAd()">Watch Ad & Earn</button>
+    <button onclick="logout()" style="margin-top:10px;background:red;">Logout</button>
+  </div>
+</div><script>
+let userData = {};
 
-<body style="background:black; color:white; text-align:center;">
+function showRegister(){
+  document.getElementById('loginForm').classList.add('hidden');
+  document.getElementById('registerForm').classList.remove('hidden');
+}
 
-  <h1>🔥 Welcome to my pro website</h1>
-  <p>Earn with ads 🚀</p>
+function showLogin(){
+  document.getElementById('registerForm').classList.add('hidden');
+  document.getElementById('loginForm').classList.remove('hidden');
+}
 
-  <!-- 🔝 Ad 1 (Top Banner) -->
-  <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
-  <ins class="eas6a97888e2" data-zoneid="5875734"></ins> 
-  <script>
-    (AdProvider = window.AdProvider || []).push({"serve": {}});
-  </script>
+function register(){
+  let u = document.getElementById('regUser').value;
+  let p = document.getElementById('regPass').value;
+  if(u && p){
+    userData[u] = p;
+    alert('Account Created!');
+    showLogin();
+  }else{
+    alert('Fill all fields');
+  }
+}
 
-  <br><br>
+function login(){
+  let u = document.getElementById('loginUser').value;
+  let p = document.getElementById('loginPass').value;
+  if(userData[u] === p){
+    document.getElementById('authBox').classList.add('hidden');
+    document.getElementById('dashboard').classList.remove('hidden');
+  }else{
+    alert('Invalid Login');
+  }
+}
 
-  <p>👉 Click anywhere to explore more content</p>
+function logout(){
+  document.getElementById('dashboard').classList.add('hidden');
+  document.getElementById('authBox').classList.remove('hidden');
+}
 
-  <!-- 📄 Ad 2 (Middle Banner) -->
-  <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
-  <ins class="eas6a97888e10" data-zoneid="5875740"></ins> 
-  <script>
-    (AdProvider = window.AdProvider || []).push({"serve": {}});
-  </script>
+let balance = 0;
+let ads = 0;
 
-  <br><br>
-
-  <!-- 🔥 Click Button (engagement boost) -->
-  <button onclick="alert('Loading...')" style="padding:10px 20px; font-size:18px;">
-    🔥 Click Here
-  </button>
-
-  <br><br>
-
-  <!-- 🆕 Ad 3 (New Added Banner) -->
-  <script async type="application/javascript" src="https://a.pemsrv.com/ad-provider.js"></script> 
-  <ins class="eas6a97888e33" data-zoneid="5875742"></ins> 
-  <script>
-    (AdProvider = window.AdProvider || []).push({"serve": {}});
-  </script>
-
-  <br><br>
-
-  <!-- 🔚 Ad 4 (Bottom Banner) -->
-  <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
-  <ins class="eas6a97888e2" data-zoneid="5875734"></ins> 
-  <script>
-    (AdProvider = window.AdProvider || []).push({"serve": {}});
-  </script>
-
-  <!-- 🚀 Popup Ads -->
-  <script type="application/javascript">
-  (function(){
-    var script = document.createElement('script');
-    script.src = 'https://a.pemsrv.com/popunder1000.js';
-    script.async = true;
-
-    script.setAttribute('data-exo-idzone', '5875738');
-    script.setAttribute('data-exo-frequency_count', '1');
-    script.setAttribute('data-exo-trigger_method', '3');
-
-    document.body.appendChild(script);
-  })();
-  </script>
-
-</body>
+function watchAd(){
+  ads++;
+  balance += 0.5;
+  document.querySelector('.card').innerHTML = '💰 Balance: ₹'+balance.toFixed(2);
+  document.querySelectorAll('.card')[1].innerHTML = '📊 Ads Viewed: '+ads;
+}
+</script></body>
 </html>
